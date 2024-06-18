@@ -27,6 +27,17 @@ export async function generateMetadata({ params }: ProductProps): Promise<Metada
     }
 }
 
+// Next SSG (Static page cache) not possible to test on windows
+
+// export function generateStaticParams() {
+// const response = await api('/products/featured')
+// const products: Product[] = await response.json()
+//
+// return products.map(product => {
+//     return { slug: product.slug }
+// })
+
+
 export default async function ProductPage({ params }: ProductProps) {
     const product = await getProduct(params.slug)
 
