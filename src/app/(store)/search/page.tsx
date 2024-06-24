@@ -1,11 +1,24 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
-export default async function Search() {
+interface SearchProps {
+    searchParams: {
+        q: string
+    }
+}
+
+export default async function Search({ searchParams }: SearchProps) {
+    const { q: query } = searchParams
+
+    if(!query) {
+        redirect('/')
+    }
+
     return (
         <div className="flex flex-col gap-4">
             <p className="text-sm">
-                Resultados para: <span className="font-semibold"></span>
+                Results for: <span className="font-semibold">{query}</span>
             </p>
 
             <div className="grid grid-cols-3 gap-6">
