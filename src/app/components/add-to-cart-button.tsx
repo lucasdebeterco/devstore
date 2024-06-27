@@ -15,7 +15,7 @@ export function AddToCartButton({ productId }: AddToCartButtonProps) {
             onClick={() => addToCart(productId)}
             className="mt-8 flex h-12 items-center justify-center rounded-full bg-emerald-600 font-semibold text-white"
         >
-            Adicionar ao carrinho
+            Add to cart
         </button>
     )
 }
