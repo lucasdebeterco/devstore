@@ -1,3 +1,6 @@
 {
-  "extends": "@lucas.debeterco/eslint-config"
+  "extends": "@lucas.debeterco/eslint-config",
+  "rules": {
+    "@typescript-eslint/no-namespace": "off"
+  }
 }
