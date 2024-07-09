@@ -13,13 +13,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-
-
+      - run: npm ci
       - name: Cypress run
         uses: cypress-io/github-action@v6
         env:
           APP_URL: "http://localhost:3000"
-          NEXT_PUBLIC_API_BASE_URL: "https://ignite-devstore-api-pi-teal.vercel.app"
+          NEXT_PUBLIC_API_BASE_URL: "https://ignite-devstore-api.vercel.app"
         with:
           build: npm run build
           start: npm start
