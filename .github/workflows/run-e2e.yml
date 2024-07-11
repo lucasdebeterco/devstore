@@ -13,7 +13,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-        run: npm ci
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
