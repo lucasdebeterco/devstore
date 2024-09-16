@@ -1,4 +1,4 @@
-# Dev Store
+# Devstore
 
 Project related to the ignite rockeseat platform course: <b>NextJS App Router e Testes</b>
 
